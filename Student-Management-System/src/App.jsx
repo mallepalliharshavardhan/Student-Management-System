@@ -10,14 +10,16 @@ function App() {
    
   return (
     <>
-     <BrowserRouter>
+    <div >
+      <BrowserRouter>
      <Routes>
       <Route path="/" element={<StudentTable/>}> </Route>
       <Route path="/student/create" element={<CreateTable/>}> </Route>
        <Route path="/student/view/:studentId" element={<ViewDetails/>}> </Route>
         <Route path="/student/edit/:studentId" element={<EditStudent/>}> </Route> 
      </Routes>
-     </BrowserRouter>  
+     </BrowserRouter> </div>
+      
        
     </>
   )

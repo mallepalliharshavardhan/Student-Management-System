@@ -6,6 +6,13 @@
           "Place":"Bng",
           "Phone":12388933
 
+        },
+        {
+          "Id":2,
+          "Name":"uzma" ,
+          "Place":"Kurnool",
+          "Phone":12221144
+
         }
     ]
 }

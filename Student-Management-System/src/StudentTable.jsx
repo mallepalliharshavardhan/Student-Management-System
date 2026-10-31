@@ -1,6 +1,15 @@
+import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function StudentTable() {
+    const [students, setStudents] = useState("")
+
+    useEffect(() => {
+        fetch('http://localhost:8000/Student')
+            .then((res) => res.json()).then((data) => setStudents(data))
+            .catch((err) => console.log(err))
+    }, [])
+
     return (
         <main className="min-h-screen bg-slate-50 px-4 py-10 text-slate-900 sm:px-6 lg:px-8">
             <section className="mx-auto max-w-6xl">
@@ -35,19 +44,22 @@ function StudentTable() {
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-100">
-                                <tr className="transition hover:bg-slate-50">
-                                    <td className="px-5 py-4 text-slate-500">1</td>
-                                    <td className="px-5 py-4 font-medium">Nova</td>
-                                    <td className="px-5 py-4 text-slate-600">Rome</td>
-                                    <td className="px-5 py-4 text-slate-600">9281371</td>
-                                    <td className="px-5 py-4">
-                                        <div className="flex items-center gap-3">
-                                            <Link to="/student/view/1" className="font-medium text-violet-700 hover:text-violet-900">View</Link>
-                                            <Link to="/student/edit/1" className="font-medium text-slate-600 hover:text-slate-900">Edit</Link>
-                                            <button type="button" className="font-medium text-red-600 hover:text-red-800">Delete</button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                     {students && students.map((items) => 
+                                    <tr className="transition hover:bg-slate-50">
+                                        <td className="px-5 py-4 text-slate-500">{items.Id}</td>
+                                        <td className="px-5 py-4 font-medium">{items.Name}</td>
+                                        <td className="px-5 py-4 text-slate-600">{items.Place}</td>
+                                        <td className="px-5 py-4 text-slate-600">{items.Phone}</td>
+                                        <td className="px-5 py-4 flex items-center gap-3">
+                                             
+                                                <Link to="/student/view/1" className="font-medium text-violet-700 hover:text-violet-900">View</Link>
+                                                <Link to="/student/edit/1" className="font-medium text-slate-600 hover:text-slate-900">Edit</Link>
+                                                <button type="button" className="font-medium text-red-600 hover:text-red-800">Delete</button>
+                                            
+                                        </td>
+                                    </tr>
+
+                                )}
                             </tbody>
                         </table>
                     </div>

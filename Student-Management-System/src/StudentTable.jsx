@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function StudentTable() {
     const [students, setStudents] = useState("")
+    const Navigate =useNavigate();
+    const displayDetails= (items,Id)=>{
+        Navigate(`/student/view/ ${items.Id}`)
+        console.log(Id)
+    }
 
     useEffect(() => {
         fetch('http://localhost:8000/Student')
@@ -51,8 +56,9 @@ function StudentTable() {
                                         <td className="px-5 py-4 text-slate-600">{items.place}</td>
                                         <td className="px-5 py-4 text-slate-600">{items.phone}</td>
                                         <td className="px-5 py-4 flex items-center gap-3">
-                                            <Link to="/student/view/1" className="font-medium text-violet-700 hover:text-violet-900">View</Link>
-                                            <Link to="/student/edit/1" className="font-medium text-slate-600 hover:text-slate-900">Edit</Link>
+                                            <button className="font-medium text-violet-700 hover:text-violet-900"
+                                            onClick={()=> displayDetails(items.Id)}>View</button>
+                                            <button className="font-medium text-slate-600 hover:text-slate-900">Edit</button>
                                             <button type="button" className="font-medium text-red-600 hover:text-red-800">Delete</button>
                                         </td>
                                     </tr>)}

@@ -29,23 +29,23 @@ function CreateTable(){
                 <div className="grid gap-1.5">
                 <label className="font-semibold text-slate-700" htmlFor="Id">Id:</label>
                 <input className="w-full rounded border border-slate-300 px-3 py-2 focus:border-blue-600 focus:outline-2 focus:outline-blue-200"
-                 type="text" id="Id" name="Id" value={Id} onChange={(e)=> setId(e.target.value)} 
+                 type="text" id="Id" name="Id" required value={Id} onChange={(e)=> setId(e.target.value)} 
                 ></input>
                 </div>
                 <div className="grid gap-1.5">
                 <label className="font-semibold text-slate-700" htmlFor="name">Name:</label>
                 <input className="w-full rounded border border-slate-300 px-3 py-2 focus:border-blue-600 focus:outline-2 focus:outline-blue-200"
-                 type="text" id="name" name="name"  value={name} onChange={(e)=> setName(e.target.value)} ></input>
+                 type="text" id="name" name="name" required  value={name} onChange={(e)=> setName(e.target.value)} ></input>
                 </div>
                 <div className="grid gap-1.5">
                 <label className="font-semibold text-slate-700" htmlFor="place">Place:</label>
                 <input className="w-full rounded border border-slate-300 px-3 py-2 focus:border-blue-600 focus:outline-2 focus:outline-blue-200" 
-                type="text" id="place" name="Place"  value={place} onChange={(e)=> setPlace(e.target.value)} ></input>
+                type="text" id="place" name="Place" required  value={place} onChange={(e)=> setPlace(e.target.value)} ></input>
                 </div>
                 <div className="grid gap-1.5">
                 <label className="font-semibold text-slate-700" htmlFor="phone">Phone:</label>
                 <input className="w-full rounded border border-slate-300 px-3 py-2 focus:border-blue-600 focus:outline-2 focus:outline-blue-200" 
-                type="text" id="phone" name="Phone" value={phone} onChange={(e)=> setPhone(e.target.value)} ></input>
+                type="text" id="phone" name="Phone" required value={phone} onChange={(e)=> setPhone(e.target.value)} ></input>
                 </div>
                 <div className="flex gap-2">
                 <button className="justify-self-start rounded bg-blue-600 px-5 py-2 font-medium text-white hover:bg-blue-700">Save</button>

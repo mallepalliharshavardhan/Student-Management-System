@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function StudentTable() {
@@ -44,22 +44,18 @@ function StudentTable() {
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-100">
-                                     {students && students.map((items) => 
-                                    <tr className="transition hover:bg-slate-50">
+                                {students && students.map((items) =>
+                                    <tr className="transition hover:bg-slate-50" key={items.id}>
                                         <td className="px-5 py-4 text-slate-500">{items.Id}</td>
-                                        <td className="px-5 py-4 font-medium">{items.Name}</td>
-                                        <td className="px-5 py-4 text-slate-600">{items.Place}</td>
-                                        <td className="px-5 py-4 text-slate-600">{items.Phone}</td>
+                                        <td className="px-5 py-4 font-medium">{items.name}</td>
+                                        <td className="px-5 py-4 text-slate-600">{items.place}</td>
+                                        <td className="px-5 py-4 text-slate-600">{items.phone}</td>
                                         <td className="px-5 py-4 flex items-center gap-3">
-                                             
-                                                <Link to="/student/view/1" className="font-medium text-violet-700 hover:text-violet-900">View</Link>
-                                                <Link to="/student/edit/1" className="font-medium text-slate-600 hover:text-slate-900">Edit</Link>
-                                                <button type="button" className="font-medium text-red-600 hover:text-red-800">Delete</button>
-                                            
+                                            <Link to="/student/view/1" className="font-medium text-violet-700 hover:text-violet-900">View</Link>
+                                            <Link to="/student/edit/1" className="font-medium text-slate-600 hover:text-slate-900">Edit</Link>
+                                            <button type="button" className="font-medium text-red-600 hover:text-red-800">Delete</button>
                                         </td>
-                                    </tr>
-
-                                )}
+                                    </tr>)}
                             </tbody>
                         </table>
                     </div>

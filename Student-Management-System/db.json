@@ -1,18 +1,54 @@
 {
-    "Student":[
-        {
-          "Id":1,
-          "Name":"Reshma" ,
-          "Place":"Bng",
-          "Phone":12388933
-
-        },
-        {
-          "Id":2,
-          "Name":"uzma" ,
-          "Place":"Kurnool",
-          "Phone":12221144
-
-        }
-    ]
+  "Student": [
+    {
+      "Id": 1,
+      "name": "Reshma",
+      "place": "Bng",
+      "phone": 12388933,
+      "id": "tfuaFio24EQ"
+    },
+    {
+      "Id": 2,
+      "name": "uzma",
+      "place": "Kurnool",
+      "phone": 12221144,
+      "id": "5fwIpbN14A0"
+    },
+    {
+      "Id": "3",
+      "name": "Rincy",
+      "place": "calicut",
+      "phone": "97458134",
+      "id": "VOviEtA-W48"
+    },
+    {
+      "Id": "3",
+      "name": "Rincy",
+      "place": "calicut",
+      "phone": "97458134",
+      "id": "pXYzT0CHBUo"
+    },
+    {
+      "Id": "3",
+      "name": "Rincy",
+      "place": "calicut",
+      "phone": "97458134",
+      "id": "8CYbVY0Bc6I"
+    },
+    {
+      "Id": "",
+      "name": "jamu",
+      "place": "",
+      "phone": "",
+      "id": "fzrRDITihR0"
+    },
+    {
+      "Id": "4",
+      "name": "sanjana",
+      "place": "shivmoga",
+      "phone": "1213243",
+      "id": "O62RrTPO2mc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
